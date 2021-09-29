@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 access_template = ['switchport mode access',
                    'switchport access vlan {}',
@@ -5,4 +6,7 @@ access_template = ['switchport mode access',
                    'spanning-tree portfast',
                    'spanning-tree bpduguard enable']
 
-print('\n'.join(access_template).format(5))
+
+vlan = 5
+access_str = "\n".join(access_template)
+print(access_str.format(vlan))
